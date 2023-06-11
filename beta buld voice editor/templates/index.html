@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice-Controlled Text Editor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice-controlled Text Editor</h1>
+        <div class="controls">
+            <button id="start-btn">Start Listen</button>
+            <button id="stop-btn">Stop Listen</button>
+        </div>
+        <textarea id="text-input" rows="10" cols="50"></textarea>
+        <div class="options">
+            <label for="font-size">Font Size:</label>
+            <input type="number" id="font-size" min="8" max="72">
+
+            <label for="font-color">Font Color:</label>
+            <input type="color" id="font-color">
+
+            <label for="font-family">Font Family:</label>
+            <select id="font-family">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Palatino">Palatino</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <!-- Add more font options as needed -->
+            </select>
+
+            <label for="font-style">Font Style:</label>
+            <select id="font-style">
+                <option value="normal">Normal</option>
+                <option value="italic">Italic</option>
+                <option value="bold">Bold</option>
+                <option value="underline">Underline</option>
+                <!-- Add more font style options as needed -->
+            </select>
+
+            <label for="paragraph-style">Paragraph Style:</label>
+            <select id="paragraph-style">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+                <!-- Add more paragraph style options as needed -->
+            </select>
+        </div>
+        <div class="controls">
+            <button id="preview-button">Preview</button>
+        </div>
+        <div>
+            <h3>----------Preview----------</h3>
+        </div>
+        <div id="preview-container">
+        </div>
+    </div>
+    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
